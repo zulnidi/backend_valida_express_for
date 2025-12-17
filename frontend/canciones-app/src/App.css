@@ -1,0 +1,185 @@
+/* =========================================================================
+   1. ESTILOS BASE Y GENERALES
+   ========================================================================= */
+:root {
+    --color-bg-dark: #0a0a0a; 
+    --color-bg-medium: #121212; 
+    --color-bg-light: #1e1e1e; 
+    --color-input-bg: #252525; 
+    --color-primary: #1db954; 
+    --color-primary-hover: #1ed760; 
+    --color-text-light: #f1f1f1; 
+    --color-text-secondary: #cccccc;
+    --color-error: #ff4d4d; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-dark); 
+    color: var(--color-text-light); 
+    font-family: 'Inter', 'Arial', sans-serif; 
+    min-height: 100vh; 
+    line-height: 1.6; 
+}
+
+#root {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================================
+   2. ESTILOS DE FORMULARIO (Login/Registro)
+   ========================================================================= */
+
+.form-container {
+    background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg-dark) 100%);
+    padding: 2.5rem; 
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); 
+    max-width: 420px; 
+    margin: 5rem auto; 
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    color: var(--color-primary); 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600; 
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+    background: var(--color-input-bg);
+    color: var(--color-text-light);
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    border-color: var(--color-primary); 
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.3); 
+}
+
+.error-message {
+    color: var(--color-error);
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================================================================
+   3. BOTONES Y ENLACES (Genéricos)
+   ========================================================================= */
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-primary); 
+    color: var(--color-bg-dark); 
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--color-primary-hover); 
+    transform: translateY(-1px); 
+}
+
+.btn:disabled {
+    background-color: #555;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+a.link-btn {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+a.link-btn:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+/* =========================================================================
+   ESTILOS DE PÁGINA PROTEGIDA canciones
+   ========================================================================= */
+
+.page-container {
+    background-color: var(--color-bg-medium); 
+    min-height: 100vh;
+}
+
+.page-content {
+    padding: 3rem 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.page-content h1 {
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    border-left: 5px solid var(--color-primary); 
+    padding-left: 15px;
+}
+
+.protected-data-box {
+    background-color: var(--color-bg-light);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-primary); 
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.protected-data-box p:first-child {
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.btn-logout {
+    background-color: var(--color-error); 
+    width: auto; 
+    margin-top: 2rem;
+    padding: 10px 25px;
+    border-radius: 500px; 
+    display: inline-block; 
+}
+.btn-logout:hover:not(:disabled) {
+    background-color: #cc0000;
+    transform: translateY(-1px);
+}
